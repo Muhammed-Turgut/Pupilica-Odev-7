@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detaylarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@color/white"
+    tools:context=".ui.fragment.DetaylarFragment">
+
+    <ImageView
+        android:id="@+id/imageViewBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="323dp"
+        android:src="@drawable/baseline_arrow_back_ios_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Başlık -->
+    <TextView
+        android:id="@+id/textViewBaslik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Yapılacak Başlık"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBack" />
+
+    <!-- Açıklama -->
+    <EditText
+        android:id="@+id/editTextAciklama"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Yapılacak açıklaması..."
+        android:textSize="16sp"
+        android:minHeight="120dp"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@id/textViewBaslik"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <!-- Güncelle Butonu -->
+    <Button
+        android:id="@+id/buttonGuncelle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Güncelle"
+        android:backgroundTint="#4CAF50"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/editTextAciklama"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- Sil Butonu -->
+    <Button
+        android:id="@+id/buttonSil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sil"
+        android:backgroundTint="#F44336"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/buttonGuncelle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

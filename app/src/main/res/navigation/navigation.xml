@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/anaSayfaFragment">
+
+    <fragment
+        android:id="@+id/anaSayfaFragment"
+        android:name="com.muhammedturgut.todoapp.ui.fragment.AnaSayfaFragment"
+        android:label="fragment_ana_sayfa"
+        tools:layout="@layout/fragment_ana_sayfa" >
+        <action
+            android:id="@+id/kayitKaydetGecis"
+            app:destination="@id/kayitFragment" />
+        <action
+            android:id="@+id/kayitDetayGecis"
+            app:destination="@id/detaylarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kayitFragment"
+        android:name="com.muhammedturgut.todoapp.ui.fragment.KayitFragment"
+        android:label="fragment_kayit"
+        tools:layout="@layout/fragment_kayit" />
+
+    <fragment
+        android:id="@+id/detaylarFragment"
+        android:name="com.muhammedturgut.todoapp.ui.fragment.DetaylarFragment"
+        android:label="fragment_detaylar"
+        tools:layout="@layout/fragment_detaylar">
+
+
+        <argument
+            android:name="kayit"
+            app:argType="com.muhammedturgut.todoapp.data.entity.Kayit"
+            app:nullable="false" />
+
+    </fragment>
+
+
+
+</navigation>
